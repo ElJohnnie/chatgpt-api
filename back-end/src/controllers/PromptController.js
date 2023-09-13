@@ -2,6 +2,7 @@ const prompt = require('../services/openai')
 
 class PromptController {
     async sendText(req, res) {
+        console.log(req)
         try {
             const response = await prompt('teste 123123')
             

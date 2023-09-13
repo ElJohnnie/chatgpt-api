@@ -1,4 +1,4 @@
-import prompt from "../config/openai"
+const prompt = require('../services/openai')
 
 class PromptController {
     async sendText(req, res) {
@@ -16,4 +16,4 @@ class PromptController {
     }
 }
 
-export default new PromptController();
+module.exports = new PromptController();

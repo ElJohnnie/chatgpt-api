@@ -1,11 +1,12 @@
 // This code is for v4 of the openai package: npmjs.com/package/openai
 // import OpenAI from "openai";
 const OpenAI = require('openai');
-
+const secrets = require('../config/secrets');
+console.log(secrets)
 
 const openai = new OpenAI({
   // apiKey: process.env.OPENAI_API_KEY,
-  apiKey: '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',
+  apiKey: secrets.apiKey,
 });
 
 const prompt = async (prompt) => { 

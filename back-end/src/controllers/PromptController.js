@@ -2,17 +2,15 @@ const prompt = require('../services/openai')
 
 class PromptController {
     async sendText(req, res) {
-        console.log(req)
         try {
-            const response = await prompt('teste 123123')
-            
-            return res.status(200).json({
-                status: 200,
-                message: "Text sent successfully",
-                data: response.data.choices[0].text
-            })
+            const response = await prompt(req.body.chat)
+            return res.status(200).json(response)
         } catch (e) { 
-            throw new Error(e)
+            console.log(e)
+            return res.status(500).json({
+                status: 500,
+                message: "Text sent unsuccessfully",
+            })
         }
     }
 }

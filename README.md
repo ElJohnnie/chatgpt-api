@@ -1,5 +1,5 @@
 # chatgpt-api
-![image](https://github.com/ElJohnnie/chatgpt-api/assets/54804502/b2bca7fa-5d5b-48db-9ba7-8c31d92c1ab9) T
+![image](https://github.com/ElJohnnie/chatgpt-api/assets/54804502/b2bca7fa-5d5b-48db-9ba7-8c31d92c1ab9) 
 
 ### sep, 16 updated
 Start voice recognition to set value at main input

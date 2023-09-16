@@ -26,8 +26,6 @@ async function main() {
     max_tokens: 7,
     temperature: 0,
   });
-
-  console.log(completion);
 }
 main();
 

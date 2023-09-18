@@ -1,11 +1,11 @@
 import './styles/app.css';
 import './styles/reset.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { chatRequest } from './gateways/api'
 import SideMenu from './components/SideMenu/Sidemenu'
 import ChatMessage from './components/ChatMessage/ChatMessage'
-import speechRecognition from './usability/speechRecognition';
+import Recognition from './components/Buttons/Recognition/Recognition';
 
 function App() {
 
@@ -34,9 +34,6 @@ function App() {
     setInput("")
   }
 
-  useEffect(() => {
-    // speechRecognition();
-  }, []);
   return (
     <div className='App'>
 
@@ -51,7 +48,7 @@ function App() {
           </div>
 
           <div className='chat-input-holder'>
-            <form onSubmit={handleSubmit}>
+            <form class="chat-form-area" onSubmit={handleSubmit}>
               <input
                 rows='1'
                 className='chat-input-textarea'
@@ -60,6 +57,7 @@ function App() {
               >
               </input>
             </form>
+            <Recognition />
           </div>
       </section>
 
